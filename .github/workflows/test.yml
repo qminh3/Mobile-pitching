@@ -59,3 +59,33 @@ jobs:
         with:
           commit_message: "chore: update coverage badge"
           file_pattern: coverage-badge.svg
+
+  sonarcloud:
+    needs: test # Ensure this job only runs if 'test' succeeds
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        # Use fetch-depth: 0 for proper SCM integration (branch/PR detection)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+
+      - name: Download test coverage artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed for PR decoration
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # Your SonarCloud analysis token
+        with:
+          # Replace these with your actual SonarCloud keys
+          projectKey: 'TestingMobile-251_Mobile-pitching'
+          organization: 'testingmobile-251'
+          args: >
+            -Dsonar.typescript.lcov.reportPaths=coverage/lcov.info
+            -Dsonar.sources=src
