@@ -14,6 +14,7 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=ClassyAlexking_Mobile-pitching&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=ClassyAlexking_Mobile-pitching)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ClassyAlexking_Mobile-pitching&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ClassyAlexking_Mobile-pitching)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ClassyAlexking_Mobile-pitching&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=ClassyAlexking_Mobile-pitching)
+
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=ClassyAlexking_Mobile-pitching)](https://sonarcloud.io/summary/new_code?id=ClassyAlexking_Mobile-pitching)
 [![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-highlight.svg)](https://sonarcloud.io/summary/new_code?id=ClassyAlexking_Mobile-pitching)
 
